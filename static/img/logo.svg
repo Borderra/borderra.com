@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Borderra logo">
+  <rect width="64" height="64" rx="14" fill="#06080c"/>
+  <g transform="translate(32 32) scale(.8) translate(-32 -32)">
+    <path d="M17 13h17c9 0 14 4 14 11 0 4-2 7-6 9 5 2 8 5 8 10 0 7-6 11-16 11H17V13Zm15 18c5 0 8-2 8-6s-3-6-8-6h-7v12h7Zm1 17c5 0 8-2 8-6s-3-6-8-6h-8v12h8Z" fill="#f4f6f8"/>
+  </g>
+  <path d="M10 10h44v44H10Z" fill="none" stroke="#9eb1c5" stroke-opacity=".34" stroke-width="2"/>
+</svg>
