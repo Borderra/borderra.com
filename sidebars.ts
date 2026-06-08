@@ -4,6 +4,13 @@ const sidebars: SidebarsConfig = {
   borderraSidebar: [
     'intro',
     'ip',
+    'map',
+    'gold',
+    'town',
+    'land',
+    'nation',
+    'shops',
+    'mcmmo',
     'rules'
   ],
 };

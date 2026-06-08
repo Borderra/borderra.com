@@ -1,3 +1,19 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Minecraft Ten';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/minecraftten.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Minecraft';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/minecraft.woff2') format('woff2');
+}
+
 :root {
   --borderra-bg: #05070a;
   --borderra-panel: #0d1118;
@@ -7,7 +23,13 @@
   --borderra-text: #f4f6f8;
   --borderra-muted: #aeb8c5;
   --borderra-soft: #c8d5e4;
-  --borderra-title-font: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  --borderra-link: #8fe7ff;
+  --borderra-link-hover: #ffffff;
+  --borderra-link-visited: var(--borderra-link);
+  --borderra-focus: #ffd166;
+  --borderra-bold-shadow: 0.026em 0 0 currentColor, -0.011em 0 0 currentColor, 0 0.014em 0 currentColor;
+  --borderra-title-font: 'Minecraft Ten', 'Arial Narrow', Arial, sans-serif;
+  --borderra-ui-font: 'Minecraft', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --ifm-color-primary: #c8d5e4;
   --ifm-color-primary-dark: #afc0d4;
@@ -20,10 +42,12 @@
   --ifm-background-surface-color: var(--borderra-panel);
   --ifm-font-color-base: var(--borderra-text);
   --ifm-font-color-secondary: var(--borderra-muted);
-  --ifm-font-family-base: 'Nunito Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-link-color: var(--borderra-link);
+  --ifm-link-hover-color: var(--borderra-link-hover);
+  --ifm-font-family-base: var(--borderra-ui-font);
   --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
   --ifm-heading-font-family: var(--borderra-title-font);
-  --ifm-heading-font-weight: 700;
+  --ifm-heading-font-weight: 400;
   --ifm-navbar-height: 4rem;
   --ifm-navbar-background-color: rgba(5, 7, 10, 0.78);
   --ifm-footer-background-color: #05070a;
@@ -61,10 +85,28 @@ body {
   color: var(--borderra-text);
 }
 
+strong,
+b {
+  font-weight: 900;
+  text-shadow: var(--borderra-bold-shadow);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role='button']:focus-visible {
+  outline: 3px solid var(--borderra-focus);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(255, 209, 102, 0.22);
+}
+
 h1,
 h2,
 h3 {
-  letter-spacing: -0.03em;
+  letter-spacing: 0.04em;
 }
 
 .navbar {
@@ -130,11 +172,11 @@ h3 {
 }
 
 .footer__link-item {
-  color: var(--borderra-muted);
+  color: var(--borderra-link);
 }
 
 .footer__link-item:hover {
-  color: #ffffff;
+  color: var(--borderra-link-hover);
 }
 
 .theme-doc-sidebar-container {
@@ -165,24 +207,41 @@ h3 {
 
 .theme-doc-markdown h2 {
   color: #f4f6f8;
-  font-family: var(--ifm-font-family-base);
+  font-family: var(--borderra-title-font);
   font-size: 1.75rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   margin-top: 2.6rem;
 }
 
 .theme-doc-markdown h3 {
   color: #f4f6f8;
-  font-family: var(--ifm-font-family-base);
+  font-family: var(--borderra-title-font);
   font-size: 1.28rem;
-  font-weight: 900;
-  letter-spacing: 0;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .theme-doc-markdown p,
 .theme-doc-markdown li {
   color: #dce4ed;
+}
+
+.theme-doc-markdown a,
+.blog-wrapper article a {
+  color: var(--borderra-link);
+  font-weight: 900;
+  text-shadow: var(--borderra-bold-shadow);
+}
+
+.theme-doc-markdown a:visited,
+.blog-wrapper article a:visited {
+  color: var(--borderra-link-visited);
+}
+
+.theme-doc-markdown a:hover,
+.blog-wrapper article a:hover {
+  color: var(--borderra-link-hover);
 }
 
 .theme-doc-markdown img {

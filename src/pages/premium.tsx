@@ -19,15 +19,13 @@ export default function Premium(): ReactNode {
             <article className={styles.pricingCard}>
               <span className={styles.label}>Borderra Premium</span>
               <span className={styles.price}>$8</span>
-              <p>Monthly supporter package placeholder. Replace pricing and perks with real store data when ready.</p>
+              <p>Monthly supporter package placeholder.</p>
               <Link className={styles.button} href="https://store.borderra.com">Open store</Link>
             </article>
             <article className={styles.card}>
               <h2>Cosmetics</h2>
               <ul>
                 <li>Name styling</li>
-                <li>Particle trails</li>
-                <li>Cosmetic pets</li>
                 <li>Profile badges</li>
               </ul>
             </article>
@@ -36,7 +34,6 @@ export default function Premium(): ReactNode {
               <ul>
                 <li>Extra saved map pins</li>
                 <li>Queue priority</li>
-                <li>More wardrobe presets</li>
                 <li>Supporter Discord role</li>
               </ul>
             </article>

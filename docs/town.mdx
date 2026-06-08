@@ -1,0 +1,152 @@
+---
+title: Town Guide
+sidebar_label: Towns
+description: Create, join, claim, manage, and grow a Borderra town.
+---
+
+# Town Guide
+
+![Borderra geopolitical Minecraft town preview](/img/borderra-hero.avif)
+
+Towns are the foundation of Borderra. A town protects land, gives players a shared home, creates local politics, and turns empty territory into part of the server's history.
+
+A strong town is more than a claim on the map. It needs residents, storage, roads, farms, markets, permissions, and a clear plan for expansion.
+
+## The Essentials
+
+1. Pick a location using the [Map Guide](./map). Check nearby claims, coastlines, roads, resources, and room for future growth.
+2. Stand where the town will begin and create it with `/t new <name>`.
+3. Deposit gold into the town bank before expanding with `/t deposit <amount>`.
+4. Claim nearby chunks with `/t claim` while standing inside unclaimed land connected to the town.
+5. Invite residents with `/t invite <player>`.
+6. Use `/t spawn` to return to the town spawn.
+
+Creating and expanding towns uses gold. The in-game confirmation prompt shows the cost before the action is accepted.
+
+## Joining A Town
+
+Joining an existing town is the safest start for new players. It gives access to protected land, neighbors, supplies, and local knowledge before creating a settlement alone.
+
+Ways to join:
+
+- Ask a mayor or recruiter for an invite.
+- Accept a town invite with `/accept`.
+- Join an open town with `/t join <town>`.
+- Leave a town with `/t leave` when you are not the mayor.
+
+Before joining, check the town on the live map and ask where residents are allowed to build.
+
+## Choosing Land
+
+Good town land has room to grow and a reason to exist.
+
+Look for:
+
+- **Expansion space** - Leave enough unclaimed land nearby for farms, roads, markets, walls, and resident plots.
+- **Resources** - Wood, food, stone, ores, animals, water, and travel routes keep a town useful.
+- **Borders** - Starting directly against another claim creates tension before the town is ready for it.
+- **Travel access** - Coasts, rivers, flat land, and road corridors make trade easier.
+- **Defensible shape** - Clean borders are easier to understand, negotiate, and protect.
+
+Scout the area in game before claiming it. The map shows territory; walking the land shows caves, terrain problems, and nearby activity.
+
+## Claims And Plots
+
+A claim is a chunk controlled by the town. Claims create the town's border and protect land from outsiders.
+
+A plot is a managed chunk inside the town. Plots let the mayor divide town land into homes, shops, farms, embassies, public builds, and storage areas.
+
+Useful plot commands:
+
+```text
+/plot fs <price>
+/plot claim
+/plot unclaim
+/plot set perm <build|destroy|switch|itemuse> <on|off>
+```
+
+Use plots to keep the town organized. New residents need clear places to build, and public areas need different access than private houses.
+
+## Town Permissions
+
+Town permissions control what players can do inside town land.
+
+The core permission types are:
+
+- **Build** - Place blocks.
+- **Destroy** - Break blocks.
+- **Switch** - Use doors, buttons, levers, chests, furnaces, hoppers, and similar blocks.
+- **Itemuse** - Use items such as buckets, flint and steel, ender pearls, bonemeal, and similar tools.
+
+Keep outsider permissions locked down. Give residents enough access to build their homes and work on projects without opening the entire town to theft or grief.
+
+Useful permission commands:
+
+```text
+/t set perm <group> <permission> <on|off>
+/plot set perm <permission> <on|off>
+```
+
+Use plot permissions for individual areas and town permissions for broad defaults.
+
+## Ranks And Trust
+
+Ranks let the mayor delegate work without giving every resident full control.
+
+Use ranks for:
+
+- Inviting new residents.
+- Helping claim and organize land.
+- Managing plots and public projects.
+- Handling town bank access.
+- Removing inactive or disruptive residents.
+
+Rank commands:
+
+```text
+/t rank add <player> <rank>
+/t rank remove <player> <rank>
+```
+
+Give ranks that control land, permissions, bank withdrawals, or resident removal only to trusted players. One bad rank assignment can damage the whole town.
+
+## Growing A Good Town
+
+A town survives longer when residents have reasons to stay.
+
+Strong town habits:
+
+- Mark open plots clearly so new residents know where to build.
+- Build shared farms, storage, roads, and basic public infrastructure early.
+- Keep town rules short and visible.
+- Price plots and shop space fairly.
+- Give residents projects instead of handing them everything for free.
+- Use the map before expanding toward another town.
+- Keep emergency gold for claims, repairs, and diplomacy.
+
+Borderra is new, so early towns have a larger impact than they would on an older map. Reliable towns become landmarks, markets, allies, rivals, and future nation cores.
+
+## Common Town Commands
+
+```text
+/t
+/t <town>
+/t here
+/t list
+/t new <name>
+/t invite <player>
+/t join <town>
+/t leave
+/t spawn
+/t deposit <amount>
+/t claim
+/t unclaim
+/t set homeblock
+/t set spawn
+/t set board <message>
+/t rank add <player> <rank>
+/t rank remove <player> <rank>
+/t set perm <group> <permission> <on|off>
+```
+
+Use `/t` in game to inspect town information and available command help.

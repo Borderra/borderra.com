@@ -52,10 +52,6 @@ const config: Config = {
     ],
   ],
 
-  stylesheets: [
-    'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Nunito+Sans:wght@400;500;700;800;900&display=swap',
-  ],
-
   themeConfig: {
     image: 'img/social-card.jpg',
     colorMode: {
@@ -67,8 +63,12 @@ const config: Config = {
       {
         name: 'description',
         content:
-          'Borderra is a geopolitical Minecraft server built around towns, nations, and player-made territory.',
+          'Borderra is a geopolitical Minecraft server built around towns, nations, player-made territory, Towny, QuickShop, mcMMO, and custom-developed gameplay systems.',
       },
+      {property: 'og:image:width', content: '1200'},
+      {property: 'og:image:height', content: '630'},
+      {property: 'og:image:alt', content: 'Borderra geopolitical Minecraft server preview'},
+      {name: 'twitter:card', content: 'summary_large_image'},
     ],
     navbar: {
       title: '',
@@ -111,7 +111,7 @@ const config: Config = {
         {
           title: 'Community',
           items: [
-            {label: 'Discord', href: 'https://discord.gg/borderra'},
+            {label: 'Discord', href: 'https://discord.gg/EhuM7BaJ68'},
             {label: 'Updates', to: '/blog'},
             {label: 'Rules', to: '/docs/ip'},
             {label: 'Vote', to: '/community'},
