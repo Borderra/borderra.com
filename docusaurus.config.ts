@@ -75,6 +75,8 @@ const config: Config = {
       logo: {
         alt: 'Borderra logo',
         src: 'img/logo.svg',
+        width: 64,
+        height: 64,
       },
       items: [
         {href: 'https://map.borderra.com', label: 'Map', position: 'left'},

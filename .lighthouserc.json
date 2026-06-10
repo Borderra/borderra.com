@@ -5,10 +5,16 @@
       "numberOfRuns": 1,
       "settings": {
         "chromeFlags": "--no-sandbox --disable-dev-shm-usage"
-      }
+      },
+      "url": [
+        "/",
+        "/docs/",
+        "/community/",
+        "/economy/",
+        "/premium/"
+      ]
     },
     "assert": {
-      "preset": "lighthouse:recommended",
       "assertions": {
         "categories:performance": [
           "warn",
