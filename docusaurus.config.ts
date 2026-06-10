@@ -1,6 +1,76 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import type {Config, Plugin} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+function getHtmlFiles(directory: string): string[] {
+  return fs.readdirSync(directory, {withFileTypes: true}).flatMap((entry) => {
+    const filePath = path.join(directory, entry.name);
+
+    if (entry.isDirectory()) {
+      return getHtmlFiles(filePath);
+    }
+
+    return entry.isFile() && entry.name.endsWith('.html') ? [filePath] : [];
+  });
+}
+
+function borderraFontPreloadPlugin(): Plugin<unknown> {
+  return {
+    name: 'borderra-font-preloads',
+    postBuild({outDir}) {
+      const cssDirectory = path.join(outDir, 'assets', 'css');
+
+      if (!fs.existsSync(cssDirectory)) {
+        return;
+      }
+
+      const fontUrls = new Set<string>();
+      const fontUrlPattern = /url\(["']?(\/assets\/fonts\/[^"')]+\.woff2)["']?\)/g;
+
+      for (const fileName of fs.readdirSync(cssDirectory)) {
+        if (!fileName.endsWith('.css')) {
+          continue;
+        }
+
+        const css = fs.readFileSync(path.join(cssDirectory, fileName), 'utf8');
+
+        for (const match of css.matchAll(fontUrlPattern)) {
+          fontUrls.add(match[1]);
+        }
+      }
+
+      const orderedFontUrls = [...fontUrls].sort((left, right) => {
+        const rank = (url: string) => (url.includes('minecraftten') ? 0 : 1);
+        return rank(left) - rank(right) || left.localeCompare(right);
+      });
+
+      if (orderedFontUrls.length === 0) {
+        return;
+      }
+
+      const preloadTags = orderedFontUrls
+        .map((url) => `<link rel="preload" as="font" href="${url}" type="font/woff2" crossorigin="anonymous" />`)
+        .join('');
+
+      for (const htmlFile of getHtmlFiles(outDir)) {
+        const html = fs.readFileSync(htmlFile, 'utf8');
+
+        if (orderedFontUrls.every((url) => html.includes(url))) {
+          continue;
+        }
+
+        const imagePreloadPattern = /(<link data-rh=true rel=preload as=image[^>]+fetchpriority=high \/>)/;
+        const nextHtml = imagePreloadPattern.test(html)
+          ? html.replace(imagePreloadPattern, `$1${preloadTags}`)
+          : html.replace('<link rel=stylesheet', `${preloadTags}<link rel=stylesheet`);
+
+        fs.writeFileSync(htmlFile, nextHtml);
+      }
+    },
+  };
+}
 
 const config: Config = {
   title: 'Borderra',
@@ -13,6 +83,7 @@ const config: Config = {
 
   url: 'https://borderra.com',
   baseUrl: '/',
+  baseUrlIssueBanner: false,
   organizationName: 'Borderra',
   projectName: 'borderra.com',
 
@@ -51,6 +122,8 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  plugins: [borderraFontPreloadPlugin],
 
   themeConfig: {
     image: 'img/social-card.jpg',
