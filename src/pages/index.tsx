@@ -64,6 +64,7 @@ export default function Home(): ReactNode {
           type="image/avif"
           imageSrcSet={heroImageSrcSet}
           imageSizes="100vw"
+          fetchPriority="high"
         />
       </Head>
       <main className={styles.home}>
