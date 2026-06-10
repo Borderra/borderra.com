@@ -1,0 +1,84 @@
+---
+title: Developer API
+sidebar_label: API
+description: Borderra's developer API roadmap for server data, towns, nations, shops, ports, chat, and public tooling.
+---
+
+# Developer API
+
+![Borderra geopolitical Minecraft developer API preview](/img/borderra-hero.avif)
+
+Borderra is building a developer API for public server data and community tools.
+
+The API is part of Borderra's custom development plan. Towny, QuickShop, mcMMO, and BlueMap or Pl3xMap are the third-party systems. Everything else around them is Borderra-developed infrastructure.
+
+## API Scope
+
+The API is intended to support public tools without giving private or sensitive player data away.
+
+Target data categories:
+
+- **Server status** - Online state, player count, version, and basic public health data.
+- **Towns** - Town names, public metadata, claim counts, nation membership, and map-facing information.
+- **Nations** - Nation names, capitals, member towns, public diplomacy, and map-facing information.
+- **Claims** - Public territory data for tools that need borders, land ownership, or settlement history.
+- **Shops** - Public market data from QuickShop for price discovery, supply tracking, and trade tools.
+- **Ports** - Borderra's custom port system, including public route and destination information.
+- **Chat systems** - Borderra's custom chat plugin data that is safe for public tooling.
+- **Premium status** - Non-pay-to-win cosmetic or quality-of-life data that is safe to expose publicly.
+
+## Custom Systems
+
+Borderra will build custom systems around the core plugin stack instead of assembling gameplay from random third-party plugins.
+
+Custom systems under development:
+
+- **Custom chat plugin** - Server chat, town chat, nation chat, trade chat, moderation tools, and future integrations.
+- **Custom port system** - Travel infrastructure that supports geography, towns, nations, trade, and route planning.
+- **Teleporting rules** - Clear travel rules that keep capitals, ports, towns, and geography meaningful.
+- **Custom quarters** - More flexible housing and permission areas for towns without depending on a third-party quarters plugin.
+- **Premium options** - Cosmetic and quality-of-life perks that do not sell claims, combat power, currency generation, or political advantage.
+- **Developer API** - Public endpoints for community projects, maps, market tools, history tracking, and integrations.
+
+## API Principles
+
+The API will follow these rules:
+
+- Public data only.
+- No private chat logs.
+- No private location tracking.
+- No hidden staff data.
+- No API access that gives gameplay advantage unavailable in game.
+- Stable routes once endpoints are released.
+- Clear versioning when data shapes change.
+
+## Endpoint Status
+
+No public API endpoints are released yet.
+
+As endpoints launch, this page will document:
+
+- Base URL.
+- Authentication requirements.
+- Rate limits.
+- Versioning rules.
+- Endpoint list.
+- Request examples.
+- Response examples.
+- Error format.
+- Data privacy rules.
+
+## Developer Use Cases
+
+The API is designed for tools such as:
+
+- Town and nation profile pages.
+- Market price trackers.
+- Public shop search.
+- Claim and border history.
+- Port route planners.
+- Discord bots.
+- Community dashboards.
+- Server history archives.
+
+Borderra is new, so the API will help players record history as it happens instead of trying to reconstruct it later.

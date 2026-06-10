@@ -11,6 +11,7 @@ const sidebars: SidebarsConfig = {
     'nation',
     'shops',
     'mcmmo',
+    'api',
     'rules'
   ],
 };

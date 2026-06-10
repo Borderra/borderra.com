@@ -10,7 +10,7 @@ export default function Premium(): ReactNode {
         <div className={styles.pageHeroInner}>
           <span className={styles.label}>Support the server</span>
           <h1>Premium without breaking the world</h1>
-          <p>Premium should feel valuable without turning territory, combat, or economics into a pay-to-win shortcut.</p>
+          <p>Premium stays valuable without turning territory, combat, or economics into a pay-to-win shortcut.</p>
         </div>
       </header>
       <main className={styles.section}>
@@ -19,7 +19,7 @@ export default function Premium(): ReactNode {
             <article className={styles.pricingCard}>
               <span className={styles.label}>Borderra Premium</span>
               <span className={styles.price}>$8</span>
-              <p>Monthly supporter package placeholder.</p>
+              <p>Monthly supporter package focused on cosmetics and quality-of-life perks.</p>
               <Link className={styles.button} href="https://store.borderra.com">Open store</Link>
             </article>
             <article className={styles.card}>
