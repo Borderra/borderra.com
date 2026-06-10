@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "useGitignore": true,
+  "files": [
+    "README.md",
+    "docs/**/*.mdx",
+    "src/**/*.{ts,tsx,css}",
+    "docusaurus.config.ts",
+    "sidebars.ts"
+  ],
+  "ignorePaths": [
+    ".docusaurus",
+    "build",
+    "node_modules",
+    "package-lock.json",
+    "static/fonts"
+  ],
+  "words": [
+    "Bedrock",
+    "BlueMap",
+    "Borderra",
+    "bmap",
+    "bonemeal",
+    "Cloudflare",
+    "cooldown",
+    "Docusaurus",
+    "endregion",
+    "homeblock",
+    "itemuse",
+    "lede",
+    "mcMMO",
+    "mcrank",
+    "mcstats",
+    "mctop",
+    "Minecraft",
+    "minecraftten",
+    "Mojang",
+    "partychat",
+    "Pl3xMap",
+    "QuickShop",
+    "renderable",
+    "SRV",
+    "teleporting",
+    "terraforming",
+    "Towny",
+    "typecheck",
+    "unclaim",
+    "untruncated"
+  ]
+}

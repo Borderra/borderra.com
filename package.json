@@ -9,6 +9,8 @@
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear",
     "typecheck": "tsc"
+    "lint:markdown": "markdownlint-cli2",
+    "spellcheck": "cspell \"README.md\" \"docs/**/*.mdx\" \"src/**/*.{ts,tsx,css}\" \"docusaurus.config.ts\" \"sidebars.ts\""
   },
   "dependencies": {
     "@docusaurus/core": "3.10.1",
@@ -25,6 +27,8 @@
     "@docusaurus/tsconfig": "3.10.1",
     "@docusaurus/types": "3.10.1",
     "@types/react": "19.2.17",
+    "cspell": "10.0.1",
+    "markdownlint-cli2": "0.22.1",
     "typescript": "6.0.3"
   },
   "browserslist": {
