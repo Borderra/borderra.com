@@ -8,7 +8,7 @@
     "build": "docusaurus build",
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
     "lint:markdown": "markdownlint-cli2",
     "spellcheck": "cspell \"README.md\" \"docs/**/*.mdx\" \"src/**/*.{ts,tsx,css}\" \"docusaurus.config.ts\" \"sidebars.ts\""
   },
