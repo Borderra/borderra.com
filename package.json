@@ -27,7 +27,7 @@
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
     "@types/react": "19.2.18",
-    "cspell": "10.1.1",
+    "cspell": "10.2.1",
     "markdownlint-cli2": "0.23.2",
     "typescript": "7.0.2"
   },
